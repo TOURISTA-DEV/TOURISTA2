@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         phoneEditText = (EditText)findViewById(R.id.phone_edit_text_login_xml);
 
         Toast.makeText(getApplicationContext(),
-                "final changing !", Toast.LENGTH_LONG)
+                "LOL  !", Toast.LENGTH_LONG)
                 .show();
     }
 

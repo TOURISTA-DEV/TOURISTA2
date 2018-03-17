@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         phoneEditText = (EditText)findViewById(R.id.phone_edit_text_login_xml);
 
         Toast.makeText(getApplicationContext(),
-                "Please enter phone number!", Toast.LENGTH_LONG)
+                "Please enter phone !", Toast.LENGTH_LONG)
                 .show();
     }
 

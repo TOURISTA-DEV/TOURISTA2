@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    tools:context="com.example.rehan.tourista.CostEstimator0Fragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:id="@id/imageView"
+                android:src="@drawable/logoblue"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cost_estimator0_text"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@id/imageView"/>
+            <Button
+                android:layout_width="@dimen/main_buttons_width"
+                android:layout_height="wrap_content"
+                android:text="Lets Estimate"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/custom_background_blue"
+                android:id="@+id/estimate_btn_cost_estimator0_xml"
+                android:layout_centerHorizontal="true"
+                android:textSize="17dp"
+                android:layout_below="@id/textView"
+                android:layout_marginTop="25dp"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rehan.tourista.CostEstimator0Fragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cost_estimator0_text"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="20dp"
+                android:paddingTop="25dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentTop="true" />
+            <Button
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:text="Lets Estimate"
+                android:textColor="#FFFFFF"
+                android:background="@color/colorPrimary"
+                android:id="@+id/estimate_btn_cost_estimator0_xml"
+                android:layout_centerHorizontal="true"
+                android:textSize="22dp"
+                android:layout_below="@id/textView"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

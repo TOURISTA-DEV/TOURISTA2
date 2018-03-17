@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="60dp"
+    tools:context="com.example.rehan.tourista.RatingActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/textview_feedback_xml"
+                android:text="PLEASE RATE US"
+                android:textColor="#100b0b"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textStyle="bold"
+
+                />
+            <RatingBar
+                android:id="@+id/rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1"
+                android:clickable="true"
+                android:focusedByDefault="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/textview_feedback_xml"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/textview1_feedback_xml"
+                android:text="Help us to Improve by Providing your valable Feedback"
+                android:textColor="#100b0b"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif"
+                android:textAlignment="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@id/rate" />
+
+            <EditText
+                android:layout_marginTop="30dp"
+                android:hint="feedback"
+                android:textColorHint="#786c6c"
+                android:textSize="20dp"
+                android:id="@+id/edittext1_feedback_xml"
+                android:layout_below="@id/textview1_feedback_xml"
+                android:layout_width="3400dp"
+                android:background="#d6d3d3"
+                android:layout_height="180dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:inputType="text"
+                android:gravity="start"
+                />
+            <Button
+                android:id="@+id/submit_rate_us_xml"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Submit"
+                android:textSize="17dp"
+                android:textColor="#FFFF"
+                android:background="@drawable/custom_background_blue"
+                android:layout_below="@id/edittext1_feedback_xml"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+
+                />
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Later"
+                android:textSize="17dp"
+                android:textColor="#FFFF"
+
+                android:background="@drawable/custom_background_blue"
+                android:layout_marginRight="0dp"
+                android:layout_alignBaseline="@+id/submit_rate_us_xml"
+                android:layout_alignBottom="@+id/submit_rate_us_xml"
+                android:layout_alignEnd="@+id/edittext1_feedback_xml"
+                android:id="@+id/later_btn_rate_us_xml"
+                />
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

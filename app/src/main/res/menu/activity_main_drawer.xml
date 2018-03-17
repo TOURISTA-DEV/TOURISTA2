@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <!--<item-->
+            <!--android:id="@+id/nav_home"-->
+            <!--android:icon="@drawable/home"-->
+            <!--android:title="Home" />-->
+        <item
+            android:id="@+id/nav_journeys"
+            android:icon="@drawable/journeys"
+            android:title="Journeys" />
+        <item
+            android:id="@+id/nav_cost_estimator"
+            android:icon="@drawable/estimator"
+            android:title="Cost Estimator" />
+
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/about"
+            android:title="About Us" />
+        <item
+            android:id="@+id/nav_travel_agents"
+            android:icon="@drawable/agent"
+            android:title="Travel Agents" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/settings"
+            android:title="Settings" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_be_travel_agents"
+                android:icon="@drawable/betravelagent"
+                android:title="Be a Travel Agent" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/feedback"
+                android:title="Feedback" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height = "match_parent" android:paddingLeft= "@dimen/activity_horizontal_margin"
+    android:paddingRight = "@dimen/activity_horizontal_margin"
+    android:paddingTop = "@dimen/activity_vertical_margin"
+    android:paddingBottom = "@dimen/activity_vertical_margin"
+    android:background="@color/colorPrimary"
+    >
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/editText"
+        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layoutDirection="inherit"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="20dp"
+        android:windowSoftInputMode="stateVisible|adjustResize"
+        android:layout_centerHorizontal="true"
+        >
+
+
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:id = "@+id/password_txt_view_login1_xml"
+        android:hint = "Enter Password"
+        android:focusable = "true"
+        android:textColorHighlight="@color/colorAccent"
+        android:textColorHint = "#94ffeded"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/phone_text_size_login_"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/login_logo"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="70dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dont_have_account_txt_view_login1_xml"
+        android:text="Dont have account?"
+        android:textColor="@color/colorAccent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/editText"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/signin_btn_login1_xml"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forgot_password_txt_view_login1_xml"
+        android:text="Forgot password?"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/editText"
+        android:textSize="20dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="15dp"
+        />
+
+
+
+    <Button
+        android:layout_width="@dimen/main_buttons_width"
+        android:layout_height="wrap_content"
+        android:text="SIGN IN"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/custom_background"
+        android:id="@+id/signin_btn_login1_xml"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="22dp"/>
+
+
+
+
+</RelativeLayout>

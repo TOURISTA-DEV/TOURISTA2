@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="60dp"
+    tools:context="com.example.rehan.tourista.MainActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/textview_feedback_xml"
+                android:text="Help us to improve by providing your valuable  feedback "
+                android:textColor="#100b0b"
+                android:textSize="30dp"
+                android:textAlignment="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_centerHorizontal="true"
+                />
+            <EditText
+                android:layout_marginTop="30dp"
+                android:hint="feedback"
+                android:textColorHint="#867575"
+                android:textSize="20dp"
+                android:id="@+id/edittext_feedback_xml"
+                android:layout_below="@id/textview_feedback_xml"
+                android:layout_width="340dp"
+                android:background="#d6d3d3"
+                android:layout_height="200dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:inputType="text"
+                android:gravity="start"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:layout_width="@dimen/main_buttons_width"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:textColor="#FFFF"
+                android:background="@drawable/custom_background_blue"
+                android:layout_below="@id/edittext_feedback_xml"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+
+
+                />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

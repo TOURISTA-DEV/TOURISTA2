@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rehan.tourista.StayPointsActivity"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/mp1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/a"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+
+        />
+
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_toRightOf="@id/mp1"
+        android:layout_marginLeft="30dp"
+        android:text="Khanpur_Dam"
+        android:textColor="#0d0c0c"
+        android:textSize="20dp"
+        />
+    <View
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/mp1"
+        android:layout_marginTop="20dp"
+        android:background="@color/cardview_dark_background"/>
+
+    <TextView
+        android:id="@+id/t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="20dp"
+        android:text="Temperature:                       Cold"
+        android:layout_below="@id/v1"
+        android:textColor="#0d0c0c"
+        android:textSize="15dp"
+        />
+    <TextView
+        android:id="@+id/t3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Suitable Timing:                  10 a.m -- 3 a.m "
+        android:layout_below="@id/t2"
+        android:textColor="#0d0c0c"
+        android:textSize="15dp"
+        />
+    <TextView
+        android:id="@+id/t4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Description:                          Dam view and hills"
+        android:layout_below="@id/t3"
+        android:textColor="#0d0c0c"
+        android:textSize="15dp"
+        />
+    <TextView
+        android:id="@+id/t5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Facilities:                              Cliff Diving -- Swimming-- \n                                              Boating"
+        android:layout_below="@id/t4"
+        android:textColor="#0d0c0c"
+        android:textSize="15dp"
+        />
+
+
+    <TextView
+        android:id="@+id/t7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Contact No:                          0312-1299002"
+        android:layout_below="@id/t5"
+        android:textColor="#0d0c0c"
+        android:textSize="15dp"
+        />
+
+
+</RelativeLayout>

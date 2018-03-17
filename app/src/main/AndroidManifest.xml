@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.rehan.tourista">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@drawable/logomain"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logomain"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:logo="@drawable/logomain"
+        >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".LoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".LoginActivity1" android:screenOrientation="portrait" />
+        <activity android:name=".SignupActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SignupActivity1" android:screenOrientation="portrait"/>
+        <activity android:name=".ForgotPassword" android:screenOrientation="portrait"/>
+        <activity android:name=".ForgotPassword1" android:screenOrientation="portrait"/>
+        <activity android:name=".ForgotPassword2Activity" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".TravelAgentDetailsActivity"
+            android:label="@string/title_activity_travel_agent_details"
+            android:theme="@style/AppTheme" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".HotelsActivity"
+            android:label="@string/title_activity_hotels"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rehan.tourista.MainActivity" />
+        </activity>
+        <activity
+            android:name=".StayPointsActivity"
+            android:label="@string/title_activity_stay_points"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rehan.tourista.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rehan.tourista.MainActivity" />
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".JourneysActivity"
+            android:label="@string/title_activity_journeys"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rehan.tourista.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CostEstimator0Activity"
+            android:label="@string/title_activity_cost_estimator0"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rehan.tourista.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CostEstimator1Activity"
+            android:label="@string/title_activity_cost_estimator1"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rehan.tourista.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AboutUsActivity"
+            android:label="@string/title_activity_about_us"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rehan.tourista.MainActivity" />
+        </activity>
+        <activity
+            android:name=".TravelAgentsActivity"
+            android:label="@string/title_activity_travel_agents"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rehan.tourista.MainActivity" />
+        </activity>
+        <activity
+            android:name=".BeTravelAgentActivity"
+            android:label="@string/title_activity_be_travel_agent"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rehan.tourista.MainActivity" />
+        </activity>
+        <activity
+            android:name=".FeedbackActivity"
+            android:label="@string/title_activity_feedback"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rehan.tourista.MainActivity" />
+        </activity>
+        <activity
+            android:name=".RatingActivity"
+            android:label="@string/title_activity_rating"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.rehan.tourista.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

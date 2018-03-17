@@ -1,0 +1,155 @@
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <!-- TODO: Update blank fragment layout -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:hint="Where to"
+                    android:gravity="center"
+                    android:textColorHint="#100b0b"
+                    android:textSize="20dp"
+                    android:id="@+id/e1"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:inputType="text" />
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:hint="Where from"
+                    android:gravity="center"
+                    android:textColorHint="#100b0b"
+                    android:textSize="20dp"
+                    android:id="@+id/e2"
+                    android:layout_below="@id/e1"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:inputType="text" />
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:hint="Expected days"
+                    android:gravity="center"
+                    android:textColorHint="#100b0b"
+                    android:textSize="20dp"
+                    android:id="@+id/e3"
+                    android:layout_below="@id/e2"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:inputType="phone" />
+                <TextView
+                    android:layout_marginTop="50dp"
+                    android:id="@+id/e4"
+                    android:text="Transportation"
+                    android:textColor="#100b0b"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@id/e3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    />
+                <RadioButton
+                    android:id="@+id/r1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Public"
+                    android:layout_marginLeft="30dp"
+                    android:layout_below="@id/e4"/>
+                <RadioButton
+                    android:id="@+id/r2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your own"
+                    android:layout_marginLeft="30dp"
+                    android:layout_below="@id/r1"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/e5"
+                    android:text="Accomodation"
+                    android:textColor="#100b0b"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@id/r2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    />
+                <RadioButton
+                    android:id="@+id/r3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Own"
+                    android:layout_marginLeft="30dp"
+                    android:layout_below="@id/e5"/>
+                <RadioButton
+                    android:id="@+id/r4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Average Hotel"
+                    android:layout_marginLeft="30dp"
+                    android:layout_below="@id/r3"/>
+                <RadioButton
+                    android:id="@+id/r5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Luxury Hotel"
+                    android:layout_marginLeft="30dp"
+                    android:layout_below="@id/r4"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/e6"
+                    android:text="Expenses"
+                    android:textColor="#100b0b"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@id/r5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    />
+                <RadioButton
+                    android:id="@+id/r6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_below="@id/e6"/>
+                <RadioButton
+                    android:id="@+id/r7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Luxury"
+                    android:layout_marginLeft="30dp"
+                    android:layout_below="@id/r6"/>
+                <RadioButton
+                    android:id="@+id/r8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't Include"
+                    android:layout_marginLeft="30dp"
+                    android:layout_below="@id/r7"/>
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:text="Estimate"
+                    android:textColor="#FFFF"
+                    android:textSize="15dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_below="@id/r8"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/next_btn_cost_estimaor_xml"
+                    />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+

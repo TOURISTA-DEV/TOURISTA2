@@ -1,0 +1,290 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="70dp"
+    tools:context="com.example.rehan.tourista.MainActivity"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.CardView
+                android:id="@+id/card"
+                android:layout_height="150dp"
+                android:layout_width="match_parent"
+                card_view:cardCornerRadius="0dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_below="@+id/e1"
+                android:layout_alignParentStart="true">
+
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="Lahore To Karachi"
+                    android:textAlignment="center"
+                    android:textColor="#0d0c0c"
+                    android:textSize="15dp" />
+
+
+                <ImageView
+                    android:id="@+id/mp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="92dp"
+                    android:src="@drawable/mp" />
+
+                <TextView
+                    android:id="@+id/t5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="120dp"
+                    android:text="Duration 1/12/2018 -- 10/12/2018"
+                    android:textAlignment="center"
+                    android:textColor="#0d0c0c"
+                    android:textSize="15dp" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card1"
+                android:layout_height="5dp"
+                android:layout_width="match_parent"
+                card_view:cardCornerRadius="0dp"
+                android:layout_below="@+id/card"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_alignParentStart="true"
+                card_view:cardBackgroundColor="@color/cardview_shadow_start_color">
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card2"
+                android:layout_height="150dp"
+                android:layout_width="match_parent"
+                card_view:cardCornerRadius="0dp"
+                android:layout_below="@+id/card1"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp">
+
+
+                <TextView
+                    android:id="@+id/t9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="Karachi To Hyderabad"
+                    android:textColor="#0d0c0c"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+
+                <TextView
+                    android:id="@+id/t8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="Duration 1/12/2018 -- 10/12/2018"
+                    android:textColor="#0d0c0c"
+                    android:textAlignment="center"
+                    android:textSize="15dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/mp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="92dp"
+                    android:src="@drawable/mp" />
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/card9"
+                android:layout_height="5dp"
+                android:layout_width="match_parent"
+                card_view:cardCornerRadius="0dp"
+                android:layout_below="@+id/card2"
+                android:layout_alignParentStart="true"
+                card_view:cardBackgroundColor="@color/cardview_shadow_start_color"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp">
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/card3"
+                android:layout_height="150dp"
+                android:layout_width="match_parent"
+                card_view:cardCornerRadius="0dp"
+                android:layout_below="@+id/card9"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp">
+
+
+                <TextView
+                    android:id="@+id/t11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="Murree To Naran"
+                    android:textColor="#0d0c0c"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+
+                <TextView
+                    android:id="@+id/t15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="Duration 1/12/2018 -- 10/12/2018"
+                    android:textColor="#0d0c0c"
+                    android:textSize="15dp"
+                    android:textAlignment="center"
+                    />
+
+                <ImageView
+                    android:id="@+id/mp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="92dp"
+                    android:src="@drawable/mp" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card4"
+                android:layout_height="5dp"
+                android:layout_width="match_parent"
+                card_view:cardCornerRadius="0dp"
+                android:layout_below="@+id/card3"
+                android:layout_alignParentStart="true"
+                card_view:cardBackgroundColor="@color/cardview_shadow_start_color"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp">
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card5"
+                android:layout_height="150dp"
+                android:layout_width="match_parent"
+                card_view:cardCornerRadius="0dp"
+                android:layout_below="@+id/card4"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp">
+
+
+                <TextView
+                    android:id="@+id/t19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="From:  Sargodha To Lahore"
+                    android:textColor="#0d0c0c"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+
+                <TextView
+                    android:id="@+id/t18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="Duration 1/12/2018 -- 10/12/2018"
+                    android:textColor="#0d0c0c"
+                    android:textSize="15dp"
+                    android:textAlignment="center"
+                    />
+
+                <ImageView
+                    android:id="@+id/mp4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="92dp"
+                    android:src="@drawable/mp" />
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/card12"
+                android:layout_height="5dp"
+                android:layout_width="match_parent"
+                card_view:cardCornerRadius="0dp"
+                android:layout_below="@+id/card5"
+                android:layout_alignParentStart="true"
+                card_view:cardBackgroundColor="@color/cardview_shadow_start_color"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp">
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/card8"
+                android:layout_height="150dp"
+                android:layout_width="match_parent"
+                card_view:cardCornerRadius="0dp"
+                android:layout_below="@+id/card12"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp">
+
+
+                <TextView
+                    android:id="@+id/t21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="Multan To Karachi"
+                    android:textColor="#0d0c0c"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+
+                <TextView
+                    android:id="@+id/t25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="Duration 1/12/2018 -- 10/12/2018"
+                    android:textColor="#0d0c0c"
+                    android:textSize="15dp"
+                    android:textAlignment="center"
+                    />
+
+                <ImageView
+                    android:id="@+id/mp5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="92dp"
+                    android:src="@drawable/mp" />
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/card14"
+                android:layout_height="5dp"
+                android:layout_width="match_parent"
+                card_view:cardCornerRadius="0dp"
+                android:layout_below="@+id/card8"
+                android:layout_alignParentStart="true"
+                card_view:cardBackgroundColor="@color/cardview_shadow_start_color"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp">
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

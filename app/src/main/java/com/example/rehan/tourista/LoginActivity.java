@@ -39,6 +39,10 @@ public class LoginActivity extends AppCompatActivity {
     private void createWidget(){
         nextButton =(Button)findViewById(R.id.next_btn_login_xml);
         phoneEditText = (EditText)findViewById(R.id.phone_edit_text_login_xml);
+
+        Toast.makeText(getApplicationContext(),
+                "Please enter phone number!", Toast.LENGTH_LONG)
+                .show();
     }
 
 }

@@ -6,10 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
     Context context=this;
     Button nextButton;
+    EditText phoneEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,13 +22,23 @@ public class LoginActivity extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(context, LoginActivity1.class);
-                startActivity(i);
+                if (phoneEditText.getText().toString().trim().isEmpty()){
+                    Toast.makeText(getApplicationContext(),
+                            "Please enter phone number!", Toast.LENGTH_LONG)
+                            .show();
+                }
+                else{
+                    Intent i = new Intent(context, LoginActivity1.class);
+                    i.putExtra("PHONE", phoneEditText.getText().toString());
+                    startActivity(i);
+                }
+
             }
         });
     }
     private void createWidget(){
         nextButton =(Button)findViewById(R.id.next_btn_login_xml);
+        phoneEditText = (EditText)findViewById(R.id.phone_edit_text_login_xml);
     }
 
 }

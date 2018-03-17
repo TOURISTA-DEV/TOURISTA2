@@ -19,7 +19,8 @@
         android:layoutDirection="inherit"
         android:windowSoftInputMode="stateVisible|adjustResize"
         app:counterEnabled="false"
-        app:counterMaxLength="11">
+        app:counterMaxLength="11"
+        android:weightSum="1">
 
 
     <EditText
@@ -27,7 +28,7 @@
         android:inputType="phone"
         android:layout_width = "match_parent"
         android:layout_height = "wrap_content"
-        android:id = "@+id/editText"
+        android:id = "@+id/phone_edit_text_login_xml"
         android:hint = "Enter Phone Number"
         android:focusable = "true"
         android:textColorHighlight="@color/colorAccent"

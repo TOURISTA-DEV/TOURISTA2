@@ -31,6 +31,8 @@ public class LoginActivity1 extends AppCompatActivity {
     TextView forgotPassword_textView;
     Button signin_Button;
     TextView password_textView;
+    TextView phone_textView;
+    ProgressBar PBar;
     private SQLiteHandler db;
     private SessionManager session;
     RequestQueue requestQueue;
@@ -43,7 +45,7 @@ public class LoginActivity1 extends AppCompatActivity {
 
         // Progress bar
 
-
+        phone_textView.setText(getIntent().getStringExtra("PHONE").toString().trim());
 // Session manager
         session = new SessionManager(getApplicationContext());
         // SQLite database handler
@@ -78,7 +80,7 @@ public class LoginActivity1 extends AppCompatActivity {
             public void onClick(View view) {
                 password_textView = (TextView) findViewById(R.id.password_txt_view_login1_xml);
                // String email = inputEmail.getText().toString().trim();
-                String phone = "03133500513";
+                String phone = getIntent().getStringExtra("PHONE").toString().trim();
                 String password = password_textView.getText().toString().trim();
 
                 // Check for empty data in the form
@@ -101,8 +103,9 @@ public class LoginActivity1 extends AppCompatActivity {
         // Tag used to cancel the request
         String tag_string_req = "req_login";
 
-        Toast.makeText(getApplicationContext(),"Hello Javatpoint",Toast.LENGTH_SHORT).show();
-
+        //Toast.makeText(getApplicationContext(),"Signing In ... ",Toast.LENGTH_SHORT).show();
+        PBar.setVisibility(View.VISIBLE);
+        signin_Button.setEnabled(false);
         StringRequest strReq = new StringRequest(Request.Method.POST,
                 AppConfig.URL_LOGIN, new Response.Listener<String>() {
 
@@ -141,6 +144,9 @@ public class LoginActivity1 extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     } else {
+                        PBar.setVisibility(View.INVISIBLE);
+                        signin_Button.setEnabled(true);
+
                         // Error in login. Get the error message
                         String errorMsg = jObj.getString("error_msg");
                         Toast.makeText(getApplicationContext(),
@@ -150,6 +156,9 @@ public class LoginActivity1 extends AppCompatActivity {
                     // JSON error
                     e.printStackTrace();
                     Toast.makeText(getApplicationContext(), "Json error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                    PBar.setVisibility(View.INVISIBLE);
+                    signin_Button.setEnabled(true);
+
                 }
 
             }
@@ -161,6 +170,9 @@ public class LoginActivity1 extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),
                         error.getMessage(), Toast.LENGTH_LONG).show();
                // hideDialog();
+                PBar.setVisibility(View.INVISIBLE);
+                signin_Button.setEnabled(true);
+
             }
         }) {
 
@@ -177,7 +189,7 @@ public class LoginActivity1 extends AppCompatActivity {
         };
 
         // Adding request to request queue
-       // AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
+        // AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
         requestQueue.add(strReq);
     }
 
@@ -188,6 +200,8 @@ public class LoginActivity1 extends AppCompatActivity {
         forgotPassword_textView = (TextView) findViewById(R.id.forgot_password_txt_view_login1_xml);
         signin_Button = (Button) findViewById(R.id.signin_btn_login1_xml);
         requestQueue= Volley.newRequestQueue(context);
+        PBar = (ProgressBar)findViewById(R.id.login_progressBar);
+        phone_textView = (TextView)findViewById(R.id.phone_edit_text_login1_xml);
 
     }
 }

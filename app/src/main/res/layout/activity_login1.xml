@@ -8,14 +8,23 @@
     android:background="@color/colorPrimary"
     >
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:text="03133500513"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"
 
+        android:layout_marginTop="15dp"
+        android:id="@+id/phone_edit_text_login1_xml"/>
     <android.support.design.widget.TextInputLayout
         android:id="@+id/editText"
         android:layout_height="wrap_content"
         android:layout_width="300dp"
         android:layoutDirection="inherit"
-        android:layout_below="@id/imageView"
-        android:layout_marginTop="20dp"
+        android:layout_below="@id/phone_edit_text_login1_xml"
         android:windowSoftInputMode="stateVisible|adjustResize"
         android:layout_centerHorizontal="true"
         >
@@ -90,8 +99,18 @@
         android:id="@+id/signin_btn_login1_xml"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:textSize="22dp"/>
-
+        android:textSize="22dp"
+        />
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/login_progressBar"
+        android:progressDrawable="@drawable/circular_progress_bar"
+        android:layout_above="@+id/dont_have_account_txt_view_login1_xml"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        />
 
 
 

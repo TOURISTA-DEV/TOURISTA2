@@ -21,17 +21,18 @@
         android:scaleType="fitXY"/>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Muhammad Rehan Akmal"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/navbarName" />
-
-    <TextView
-        android:id="@+id/textView"
+        android:id="@+id/t4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="rehan-akmal@outlook.com" />
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text=""
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/t5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="15dp"/>
 
 </LinearLayout>

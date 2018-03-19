@@ -26,7 +26,7 @@
         android:layout_marginTop="30dp"
         android:layout_toRightOf="@id/mp1"
         android:layout_marginLeft="30dp"
-        android:text="Muhammad Rehan Akmal"
+        android:text=""
         android:textColor="#0d0c0c"
         android:textSize="20dp"
         />
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/mp1"
         android:layout_marginLeft="30dp"
-        android:text="+923133500513"
+        android:text=""
         android:textColor="#0d0c0c"
         android:textSize="15dp"
         android:layout_below="@id/t1"

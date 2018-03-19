@@ -42,7 +42,7 @@ public class LoginActivity1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login1);
         createWidget();
-
+        signin_Button = (Button) findViewById(R.id.signin_btn_login1_xml);
         // Progress bar
 
         phone_textView.setText(getIntent().getStringExtra("PHONE").toString().trim());
@@ -63,6 +63,10 @@ public class LoginActivity1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(context, SignupActivity.class);
+                i.putExtra("PHONE", getIntent().getStringExtra("PHONE").toString().trim());
+                startActivity(i);
+
+
                 startActivity(i);
             }
         });
@@ -87,6 +91,7 @@ public class LoginActivity1 extends AppCompatActivity {
                 if (!phone.isEmpty() && !password.isEmpty()) {
                     // login user
                     checkLogin(phone, password);
+
                 } else {
                     // Prompt user to enter credentials
                     Toast.makeText(getApplicationContext(),
@@ -122,7 +127,7 @@ public class LoginActivity1 extends AppCompatActivity {
                     if (!error) {
                         // user successfully logged in
                         // Create login session
-                        //session.setLogin(true);
+                        session.setLogin(true);
 
                         // Now store the user in SQLite
                         String uid = jObj.getString("uid");
@@ -138,11 +143,13 @@ public class LoginActivity1 extends AppCompatActivity {
                         // Inserting row in users table
                         db.addUser(name, phone, email, city, uid, created_at);
 
+                            Intent intent = new Intent(LoginActivity1.this,
+                                    MainActivity.class);
+                            startActivity(intent);
+                            finish();
+
                         // Launch main activity
-                        Intent intent = new Intent(LoginActivity1.this,
-                                MainActivity.class);
-                        startActivity(intent);
-                        finish();
+
                     } else {
                         PBar.setVisibility(View.INVISIBLE);
                         signin_Button.setEnabled(true);

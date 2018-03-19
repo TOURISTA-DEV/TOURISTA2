@@ -32,6 +32,13 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.support.v7.app.ActionBar;
 import android.widget.Toast;
+import java.util.HashMap;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity implements
         OnMapReadyCallback,
@@ -47,6 +54,10 @@ public class MainActivity extends FragmentActivity implements
         FeedbackFragment.OnFragmentInteractionListener
         {
             private GoogleMap mMap;
+            private TextView txtName;
+            private TextView txtPhone;
+            private SQLiteHandler db;
+            private SessionManager session;
          //   private static final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +65,29 @@ public class MainActivity extends FragmentActivity implements
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Tour");
+        NavigationView mNavigationView = (NavigationView)findViewById(R.id.nav_view);
+
+        View header = mNavigationView.getHeaderView(0);
+
+        txtName = (TextView) header.findViewById(R.id.t4);
+        txtPhone = (TextView) findViewById(R.id.t5);
+
+        db = new SQLiteHandler(getApplicationContext());
+
+        // session manager
+        session = new SessionManager(getApplicationContext());
+
+        if (!session.isLoggedIn()) {
+            logoutUser();
+        }
+        HashMap<String, String> user = db.getUserDetails();
+
+        String name = user.get("name");
+        String phone = user.get("phone");
+
+        // Displaying the user details on the screen
+        //txtName.setText("hello");
+        txtName.setText("gfvhgvh");
         //setSupportActionBar(toolbar);
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -208,5 +242,16 @@ public class MainActivity extends FragmentActivity implements
                     Intent intent = new Intent(this, StayPointsActivity.class);
                     startActivity(intent);
                 }
+            }
+
+            private void logoutUser() {
+                session.setLogin(false);
+
+                db.deleteUsers();
+
+                // Launching the login activity
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
             }
         }

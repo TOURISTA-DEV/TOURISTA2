@@ -30,7 +30,7 @@
             android:inputType="textPassword"
             android:layout_width = "match_parent"
             android:layout_height = "wrap_content"
-            android:id = "@+id/name_txtview_signup1"
+            android:id = "@+id/password_txtview_signup1"
             android:hint = "Enter Password"
             android:focusable = "true"
             android:textColorHighlight="@color/colorAccent"
@@ -60,7 +60,7 @@
             android:inputType="textPassword"
             android:layout_width = "match_parent"
             android:layout_height = "wrap_content"
-            android:id = "@+id/email_txtview_signup1"
+            android:id = "@+id/confirm_password_txtview_signup1"
             android:hint = "Confirm Password"
             android:focusable = "true"
             android:textColorHighlight="@color/colorAccent"
@@ -73,7 +73,19 @@
             android:layout_alignParentStart = "true"
             android:layout_alignParentRight = "true"
             android:layout_alignParentEnd = "true" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/signup_progressBar"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:layout_above="@+id/done_btn_forgot_password2_xml"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            />
     </android.support.design.widget.TextInputLayout>
+
 
     <ImageView
         android:layout_width="wrap_content"

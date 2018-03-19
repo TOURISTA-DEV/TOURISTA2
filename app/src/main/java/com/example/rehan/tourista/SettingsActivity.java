@@ -11,10 +11,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+import java.util.HashMap;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+
+import static com.example.rehan.tourista.R.id.info;
 
 public class SettingsActivity extends AppCompatActivity {
     Button logoutBtn;
+    private TextView txtName;
+    private TextView txtPhone;
     Context context = this;
     private SQLiteHandler db;
     private SessionManager session;
@@ -22,8 +35,29 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        txtName = (TextView) findViewById(R.id.t1);
+        txtPhone = (TextView) findViewById(R.id.tt);
+
+        db = new SQLiteHandler(getApplicationContext());
+
+        // session manager
+        session = new SessionManager(getApplicationContext());
+
+        if (!session.isLoggedIn()) {
+            logoutUser();
+        }
+        HashMap<String, String> user = db.getUserDetails();
+
+        String name = user.get("name");
+        String phone = user.get("phone");
+
+        // Displaying the user details on the screen
+        txtName.setText(name);
+        txtPhone.setText(phone);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -55,10 +89,13 @@ public class SettingsActivity extends AppCompatActivity {
                 builder.show();
             }
         });
+
     }
 
     private void createWidget(){
         logoutBtn = (Button) findViewById(R.id.logout_btn_settings);
+
+
         // SqLite database handler
         db = new SQLiteHandler(getApplicationContext());
         // session manager

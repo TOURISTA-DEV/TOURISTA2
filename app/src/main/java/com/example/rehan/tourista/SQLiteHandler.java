@@ -26,8 +26,9 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 
     // Login table name
     private static final String TABLE_USER = "user";
-
+    //private static final String TABLE_LOGGED = "logged";
     // Login Table Columns names
+
     private static final String KEY_ID = "id";
     private static final String KEY_NAME = "name";
     private static final String KEY_CITY = "city";
@@ -83,11 +84,12 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         db.close(); // Closing database connection
 
         Log.d(TAG, "New user inserted into sqlite: " + id);
+
     }
 
-    /**
-     * Getting user data from database
-     * */
+        /**
+         * Getting user data from database
+         * */
     public HashMap<String, String> getUserDetails() {
         HashMap<String, String> user = new HashMap<String, String>();
         String selectQuery = "SELECT  * FROM " + TABLE_USER;
@@ -99,8 +101,8 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         if (cursor.getCount() > 0) {
             user.put("name", cursor.getString(1));
             user.put("email", cursor.getString(2));
-            user.put("uid", cursor.getString(3));
-            user.put("created_at", cursor.getString(4));
+            user.put("password", cursor.getString(3));
+            user.put("phone", cursor.getString(4));
         }
         cursor.close();
         db.close();

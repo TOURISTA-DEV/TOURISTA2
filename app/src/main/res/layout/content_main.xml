@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.rehan.tourista.MainActivity"
+    tools:context="com.example.rehan.tourista.Activities.MainActivity"
     xmlns:card_view="http://schemas.android.com/apk/res-auto">
 
     <!-- TODO: Update blank fragment layout -->
@@ -14,24 +14,24 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.example.rehan.tourista.MapsActivity" />
+        tools:context="com.example.rehan.tourista.Activities.MapsActivity" />
 
 
 
 
 
-    <Button
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:text="Update Conditions"
-        android:background="@drawable/custom_background_green"
-        android:textColor="#FFFF"
-        android:textSize="20dp"
-        android:visibility="gone"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:layout_above="@+id/end_tour_btn_main_activity_xml"
-        android:id="@+id/update_condition_btn_main_activity_xml" />
+    <!--<Button-->
+        <!--android:layout_width="350dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Update Conditions"-->
+        <!--android:background="@drawable/custom_background_green"-->
+        <!--android:textColor="#FFFF"-->
+        <!--android:textSize="20dp"-->
+        <!--android:visibility="gone"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:layout_above="@+id/end_tour_btn_main_activity_xml"-->
+        <!--android:id="@+id/update_condition_btn_main_activity_xml" />-->
 
     <Button
         android:layout_width="350dp"
@@ -44,5 +44,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:id="@+id/end_tour_btn_main_activity_xml" />
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/main_progressBar"
+        android:progressDrawable="@drawable/circular_progress_bar"
+        android:visibility="visible"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
 
 </RelativeLayout>

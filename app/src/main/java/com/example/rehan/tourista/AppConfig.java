@@ -10,4 +10,7 @@ public class AppConfig {
 
     // Server user register url
     public static String URL_REGISTER = "http://www.touristaapp.com/APIs/register_user.php";
+
+    // Server user map_locations url
+    public static String MAP_LOCATIONS = "http://www.touristaapp.com/APIs/map_locations.php";
 }

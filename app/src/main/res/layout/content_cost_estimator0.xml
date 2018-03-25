@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="50dp"
-    tools:context="com.example.rehan.tourista.CostEstimator0Fragment">
+    tools:context="com.example.rehan.tourista.Activities.CostEstimator0Fragment">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

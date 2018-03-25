@@ -21,7 +21,7 @@
         android:logo="@drawable/logomain"
         >
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:label="@string/app_name"
 
             android:screenOrientation="portrait">
@@ -33,7 +33,7 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".SplashActivity"
+        <activity android:name=".Activities.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,46 +47,46 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".LoginActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".LoginActivity1" android:screenOrientation="portrait" />
-        <activity android:name=".SignupActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".SignupActivity1" android:screenOrientation="portrait"/>
-        <activity android:name=".ForgotPassword" android:screenOrientation="portrait"/>
-        <activity android:name=".ForgotPassword1" android:screenOrientation="portrait"/>
-        <activity android:name=".ForgotPassword2Activity" android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.LoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.LoginActivity1" android:screenOrientation="portrait" />
+        <activity android:name=".Activities.SignupActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.SignupActivity1" android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.ForgotPassword" android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.ForgotPassword1" android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.ForgotPassword2Activity" android:screenOrientation="portrait"/>
         <activity
-            android:name=".TravelAgentDetailsActivity"
+            android:name=".Activities.TravelAgentDetailsActivity"
             android:label="@string/title_activity_travel_agent_details"
             android:theme="@style/AppTheme" android:screenOrientation="portrait"/>
         <activity
-            android:name=".HotelsActivity"
+            android:name=".Activities.HotelsActivity"
             android:label="@string/title_activity_hotels"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.rehan.tourista.MainActivity" />
+                android:value="com.example.rehan.tourista.Activities.MainActivity" />
         </activity>
         <activity
-            android:name=".StayPointsActivity"
+            android:name=".Activities.StayPointsActivity"
             android:label="@string/title_activity_stay_points"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.rehan.tourista.MainActivity" />
+                android:value="com.example.rehan.tourista.Activities.MainActivity" />
         </activity>
         <activity
-            android:name=".SettingsActivity"
+            android:name=".Activities.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.rehan.tourista.MainActivity" />
+                android:value="com.example.rehan.tourista.Activities.MainActivity" />
         </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -101,86 +101,86 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".Activities.MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".JourneysActivity"
+            android:name=".Activities.JourneysActivity"
             android:label="@string/title_activity_journeys"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.rehan.tourista.MainActivity" />
+                android:value="com.example.rehan.tourista.Activities.MainActivity" />
         </activity>
         <activity
-            android:name=".CostEstimator0Activity"
+            android:name=".Activities.CostEstimator0Activity"
             android:label="@string/title_activity_cost_estimator0"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.rehan.tourista.MainActivity" />
+                android:value="com.example.rehan.tourista.Activities.MainActivity" />
         </activity>
         <activity
-            android:name=".CostEstimator1Activity"
+            android:name=".Activities.CostEstimator1Activity"
             android:label="@string/title_activity_cost_estimator1"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.rehan.tourista.MainActivity" />
+                android:value="com.example.rehan.tourista.Activities.MainActivity" />
         </activity>
         <activity
-            android:name=".AboutUsActivity"
+            android:name=".Activities.AboutUsActivity"
             android:label="@string/title_activity_about_us"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.rehan.tourista.MainActivity" />
+                android:value="com.example.rehan.tourista.Activities.MainActivity" />
         </activity>
         <activity
-            android:name=".TravelAgentsActivity"
+            android:name=".Activities.TravelAgentsActivity"
             android:label="@string/title_activity_travel_agents"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.rehan.tourista.MainActivity" />
+                android:value="com.example.rehan.tourista.Activities.MainActivity" />
         </activity>
         <activity
-            android:name=".BeTravelAgentActivity"
+            android:name=".Activities.BeTravelAgentActivity"
             android:label="@string/title_activity_be_travel_agent"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.rehan.tourista.MainActivity" />
+                android:value="com.example.rehan.tourista.Activities.MainActivity" />
         </activity>
         <activity
-            android:name=".FeedbackActivity"
+            android:name=".Activities.FeedbackActivity"
             android:label="@string/title_activity_feedback"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.rehan.tourista.MainActivity" />
+                android:value="com.example.rehan.tourista.Activities.MainActivity" />
         </activity>
         <activity
-            android:name=".RatingActivity"
+            android:name=".Activities.RatingActivity"
             android:label="@string/title_activity_rating"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.rehan.tourista.MainActivity" />
+                android:value="com.example.rehan.tourista.Activities.MainActivity" />
         </activity>
     </application>
 

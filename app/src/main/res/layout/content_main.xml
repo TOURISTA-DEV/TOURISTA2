@@ -43,7 +43,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:id="@+id/end_tour_btn_main_activity_xml" />
+        android:id="@+id/end_tour_btn_main_activity_xml"
+        android:visibility="gone"/>
     <ProgressBar
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="50dp"

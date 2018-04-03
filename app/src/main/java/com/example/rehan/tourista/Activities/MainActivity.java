@@ -1,5 +1,8 @@
 package com.example.rehan.tourista.Activities;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -24,6 +27,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -58,6 +62,7 @@ public class MainActivity extends FragmentActivity implements
         TravelAgentsFragment.OnFragmentInteractionListener,
         BeTravelAgentFragment.OnFragmentInteractionListener,
         FeedbackFragment.OnFragmentInteractionListener {
+    private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private GoogleMap mMap;
     private TextView txtName;
     private TextView txtPhone;
@@ -220,29 +225,6 @@ public class MainActivity extends FragmentActivity implements
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(31.4826352,74.0712785)));
-        // Add a marker in Sydney and move the camera
-//        LatLng sydney = new LatLng(-34, 150);
-//        LatLng sydneyy = new LatLng(-34, 145);
-//        LatLng Lahore = new LatLng(-78, 72);
-//        mMap.addMarker(new MarkerOptions().position(sydney).title("Hotel").icon(BitmapDescriptorFactory.fromResource(R.drawable.hotel)));
-//        mMap.addMarker(new MarkerOptions().position(sydneyy).title("StayPoint").icon(BitmapDescriptorFactory.fromResource(R.drawable.staypoint)));
-//        mMap.addMarker(new MarkerOptions().position(Lahore).title("StayPoint").icon(BitmapDescriptorFactory.fromResource(R.drawable.staypoint)));
-//
-
-//        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-//            @Override
-//            public boolean onMarkerClick(Marker marker) {
-//                String name = marker.getTitle();
-//                LatLng temp = marker.getPosition();
-//                if (name.equalsIgnoreCase("Hotel")) {
-//                    jump(1);
-//                } else {
-//                    jump(2);
-//
-//                }
-//                return false;
-//            }
-//        });
 
 
         String tag_string_req = "req_login";
@@ -318,7 +300,7 @@ public class MainActivity extends FragmentActivity implements
             public void onErrorResponse(VolleyError error) {
                 //  Log.e(TAG, "Login Error: " + error.getMessage());
                 Toast.makeText(getApplicationContext(),
-                        error.getMessage(), Toast.LENGTH_LONG).show();
+                        "No Internet Connection!", Toast.LENGTH_LONG).show();
                 // hideDialog();
                 PBar.setVisibility(View.INVISIBLE);
             }
@@ -365,6 +347,19 @@ public class MainActivity extends FragmentActivity implements
         Intent intent = new Intent(MainActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    private void enableMyLocationIfPermitted() {
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
+                            Manifest.permission.ACCESS_FINE_LOCATION},
+                    LOCATION_PERMISSION_REQUEST_CODE);
+        } else if (mMap != null) {
+            mMap.setMyLocationEnabled(true);
+        }
     }
 
 }

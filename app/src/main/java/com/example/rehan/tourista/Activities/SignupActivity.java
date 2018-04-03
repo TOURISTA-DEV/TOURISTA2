@@ -33,7 +33,7 @@ public class SignupActivity extends AppCompatActivity {
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.cities_array, R.layout.cities_spinner_item_signup);
-// Specify the layout to use when the list of choices appears
+    // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(R.layout.cities_spinner_dropdown_item_signup);
 // Apply the adapter to the spinner
         citiesSpinner.setAdapter(adapter);

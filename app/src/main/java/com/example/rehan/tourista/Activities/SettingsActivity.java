@@ -45,7 +45,7 @@ public class SettingsActivity extends AppCompatActivity {
         if (!session.isLoggedIn()) {
             logoutUser();
         }
-        HashMap<String, String> user = db.getUserDetails();
+        HashMap<String, String> user = db.getUserDetails();   ///get loggedin user
 
         String name = user.get("name");
         String phone = user.get("phone");

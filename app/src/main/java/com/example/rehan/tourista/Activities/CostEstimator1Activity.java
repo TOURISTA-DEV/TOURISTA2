@@ -6,11 +6,12 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 
 import com.example.rehan.tourista.R;
 
 public class CostEstimator1Activity extends AppCompatActivity {
-
+    Button estimateButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +28,16 @@ public class CostEstimator1Activity extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        createWidget();
+        estimateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CostEstimator1Activity.super.onBackPressed();
+            }
+        });
     }
 
+    private void createWidget(){
+        estimateButton = (Button) findViewById(R.id.next_btn_cost_estimaor_xml);
+    }
 }

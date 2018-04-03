@@ -99,6 +99,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         // Move to first row
         cursor.moveToFirst();
         if (cursor.getCount() > 0) {
+            user.put("id", cursor.getString(0));
             user.put("name", cursor.getString(1));
             user.put("email", cursor.getString(2));
             user.put("password", cursor.getString(3));

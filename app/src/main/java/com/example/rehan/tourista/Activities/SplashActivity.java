@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.rehan.tourista.MainActivity;
 import com.example.rehan.tourista.R;
 import com.example.rehan.tourista.SQLiteHandler;
 import com.example.rehan.tourista.SessionManager;

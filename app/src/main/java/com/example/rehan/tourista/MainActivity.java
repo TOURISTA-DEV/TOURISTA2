@@ -1,4 +1,4 @@
-package com.example.rehan.tourista.Activities;
+package com.example.rehan.tourista;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -12,10 +12,25 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.rehan.tourista.AppConfig;
-import com.example.rehan.tourista.R;
-import com.example.rehan.tourista.SQLiteHandler;
-import com.example.rehan.tourista.SessionManager;
+import com.example.rehan.tourista.Activities.AboutUsActivity;
+import com.example.rehan.tourista.Activities.AboutUsFragment;
+import com.example.rehan.tourista.Activities.BeTravelAgentActivity;
+import com.example.rehan.tourista.Activities.BeTravelAgentFragment;
+import com.example.rehan.tourista.Activities.CostEstimator0Activity;
+import com.example.rehan.tourista.Activities.CostEstimator0Fragment;
+import com.example.rehan.tourista.Activities.CostEtimatorFragment;
+import com.example.rehan.tourista.Activities.FeedbackActivity;
+import com.example.rehan.tourista.Activities.FeedbackFragment;
+import com.example.rehan.tourista.Activities.HomeFragment;
+import com.example.rehan.tourista.Activities.HotelsActivity;
+import com.example.rehan.tourista.Activities.JourneysActivity;
+import com.example.rehan.tourista.Activities.JourneysFragment;
+import com.example.rehan.tourista.Activities.LoginActivity;
+import com.example.rehan.tourista.Activities.RatingActivity;
+import com.example.rehan.tourista.Activities.SettingsActivity;
+import com.example.rehan.tourista.Activities.StayPointsActivity;
+import com.example.rehan.tourista.Activities.TravelAgentsActivity;
+import com.example.rehan.tourista.Activities.TravelAgentsFragment;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -38,7 +53,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-import java.lang.reflect.Array;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -223,6 +237,7 @@ public class MainActivity extends FragmentActivity implements
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+
         mMap = googleMap;
         mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(31.4826352,74.0712785)));
 
@@ -235,17 +250,20 @@ public class MainActivity extends FragmentActivity implements
             @Override
             public void onResponse(String response) {
 
+
                 try {
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
 
                     // Check for error node in json
                     if (!error) {
+
                         Iterator<?> keys = jObj.keys();
                         while (keys.hasNext()) {
                             counter++;
                             String key = (String) keys.next();
                             if (jObj.get(key) instanceof JSONObject) {
+
                                 JSONObject obj = new JSONObject(jObj.get(key).toString());
                                 if (obj.has("hotel_id")) {
                                     String abc = obj.getString("hotel_location");
@@ -275,6 +293,7 @@ public class MainActivity extends FragmentActivity implements
 
 
                     } else {
+                        Toast.makeText(getApplicationContext(),"Hello", Toast.LENGTH_LONG).show();
                         PBar.setVisibility(View.INVISIBLE);
 
                         // Error in login. Get the error message

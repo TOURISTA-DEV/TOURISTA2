@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.rehan.tourista.MainActivity;
 import com.example.rehan.tourista.R;
 
 public class ForgotPassword2Activity extends AppCompatActivity {
